@@ -145,7 +145,7 @@ class CaveCrusader {
         let x;
         let y = 0;
 
-        map.map(row => {
+        this.map.map(row => {
 
             x = 0;
 
@@ -253,3 +253,5 @@ class CaveCrusader {
     }
 
 }
+
+export default CaveCrusader;
