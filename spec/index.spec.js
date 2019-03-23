@@ -7,7 +7,6 @@ global.window = document.defaultView;
 
 import CaveCrusader from '../script.js';
 
-
 describe('Given the Cave Crusader Class', () => {
 
     it('Should construct successfully', () => {
@@ -92,7 +91,6 @@ describe('Given the Cave Crusader Class', () => {
         expect(cc.controls.up.move).toEqual(true);
         expect(cc.controls.right.move).toEqual(false);
         expect(cc.controls.down.move).toEqual(true);
-
 
     });
 
