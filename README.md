@@ -4,7 +4,7 @@
 # Cave Crusader
 A simple canvas game that involves moving a character around the map in order to collect randomly generated stars.
 
-<a href="https://carlwillimott.github.io/cavecrusader/index.html" target="_blank">Demo</a>
+<a href="https://carlwillimott.github.io/cavecrusader/demo.html" target="_blank">Demo</a>
 
 ## Usage
 ```html
