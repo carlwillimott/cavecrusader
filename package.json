@@ -5,7 +5,7 @@
   "main": "script.js",
   "scripts": {
     "test": "nyc jasmine",
-    "coveralls": "nyc report --reporter=text-lcov jasmine | coveralls"
+    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "nyc": {
     "exclude": [
@@ -35,6 +35,7 @@
     "@babel/register": "^7.4.0",
     "babel-plugin-istanbul": "^5.1.1",
     "canvas": "^2.4.1",
+    "coveralls": "^3.0.3",
     "istanbul": "^0.4.5",
     "jasmine": "^3.3.1",
     "jasmine-spec-reporter": "^4.2.1",
