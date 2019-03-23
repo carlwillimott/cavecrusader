@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Cave Crusader</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            canvas {
+                background: black;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="cc" width="525px" height="550px"></canvas>
+        <script type="text/javascript" src="./script.js"></script>
+        <script type="text/javascript">
+
+            const map = [
+                '##########################',
+                '##########################',
+                '##                      ##',
+                '##         @            ##',
+                '##  ##  ##  ##  ##  ##  ##',
+                '##  ##  ##  ##  ##  ##  ##',
+                '##                      ##',
+                '##                      ##',
+                '##  ##  ##  ##  ##  ##  ##',
+                '##  ##  ##  ##  ##  ##  ##',
+                '##                      ##',
+                '##                      ##',
+                '##  ##  ##  ##  ##  ##  ##',
+                '##  ##  ##  ##  ##  ##  ##',
+                '##                      ##',
+                '##                      ##',
+                '##########################',
+                '##########################',
+            ];
+
+            new CaveCrusader('cc', map);
+
+        </script>
+    </body>
+</html>
