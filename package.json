@@ -4,7 +4,8 @@
   "description": "Example canvas game",
   "main": "script.js",
   "scripts": {
-    "test": "nyc jasmine"
+    "test": "nyc jasmine",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "nyc": {
     "exclude": [
