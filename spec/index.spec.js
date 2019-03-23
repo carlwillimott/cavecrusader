@@ -41,6 +41,61 @@ describe('Given the Cave Crusader Class', () => {
 
     });
 
+    it('Should be able to handle obstacles', () => {
+
+        const map = [
+            '#####',
+            '#@  #',
+            '# # #',
+            '#   #',
+            '#####',
+        ];
+
+        const cc = new CaveCrusader('cc', map);
+
+        expect(cc.controls.left.move).toEqual(false);
+        expect(cc.controls.up.move).toEqual(false);
+        expect(cc.controls.right.move).toEqual(true);
+        expect(cc.controls.down.move).toEqual(true);
+
+        document.dispatchEvent(new window.KeyboardEvent('keydown', { keyCode: 40 }));
+
+        expect(cc.controls.left.move).toEqual(false);
+        expect(cc.controls.up.move).toEqual(true);
+        expect(cc.controls.right.move).toEqual(false);
+        expect(cc.controls.down.move).toEqual(true);
+
+        document.dispatchEvent(new window.KeyboardEvent('keydown', { keyCode: 40 }));
+
+        expect(cc.controls.left.move).toEqual(false);
+        expect(cc.controls.up.move).toEqual(true);
+        expect(cc.controls.right.move).toEqual(true);
+        expect(cc.controls.down.move).toEqual(false);
+
+        document.dispatchEvent(new window.KeyboardEvent('keydown', { keyCode: 39 }));
+
+        expect(cc.controls.left.move).toEqual(true);
+        expect(cc.controls.up.move).toEqual(false);
+        expect(cc.controls.right.move).toEqual(true);
+        expect(cc.controls.down.move).toEqual(false);
+
+        document.dispatchEvent(new window.KeyboardEvent('keydown', { keyCode: 39 }));
+
+        expect(cc.controls.left.move).toEqual(true);
+        expect(cc.controls.up.move).toEqual(true);
+        expect(cc.controls.right.move).toEqual(false);
+        expect(cc.controls.down.move).toEqual(false);
+
+        document.dispatchEvent(new window.KeyboardEvent('keydown', { keyCode: 38 }));
+
+        expect(cc.controls.left.move).toEqual(false);
+        expect(cc.controls.up.move).toEqual(true);
+        expect(cc.controls.right.move).toEqual(false);
+        expect(cc.controls.down.move).toEqual(true);
+
+
+    });
+
     it('Should be able to increment the score', () => {
 
         const map = [

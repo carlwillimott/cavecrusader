@@ -61,14 +61,10 @@ class CaveCrusader {
 
                 positionSearch = [x, y];
 
-                if (positionSearch !== this.position) {
-
-                    this._positionSearchHelper(positionSearch, char, 'left');
-                    this._positionSearchHelper(positionSearch, char, 'up');
-                    this._positionSearchHelper(positionSearch, char, 'right');
-                    this._positionSearchHelper(positionSearch, char, 'down');
-
-                }
+                this._positionSearchHelper(positionSearch, char, 'left');
+                this._positionSearchHelper(positionSearch, char, 'up');
+                this._positionSearchHelper(positionSearch, char, 'right');
+                this._positionSearchHelper(positionSearch, char, 'down');
 
                 x++;
 
